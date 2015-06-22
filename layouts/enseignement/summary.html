@@ -1,0 +1,18 @@
+<article class="member-summary col-sm-6">
+  {{ if .Params.avatar }}
+    <figure class="member-summary-avatar">
+      <img src="{{ .Params.avatar }}" alt="{{ .Title }}" class="img-responsive img-circle">
+    </figure>
+  {{ end }}
+  <section class="member-summary-details">
+    <h2 class="member-summary-header"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ if .Description }}
+      <p>
+        {{ .Description }}
+      </p>
+    {{ end }}
+	  <p>
+        {{ .Content }}
+      </p>
+  </section>
+</article>
